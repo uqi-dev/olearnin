@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="md:fixed px-12 bottom-0 flex flex-col  items-end justify-center py-3 w-full">
+    <footer className="px-12 flex flex-col  items-end justify-center py-3 w-full">
       <p className="text-[8px]">
         <span className="text-gray-500 font-medium tracking-[2px] text-[10px]">OLearnin</span> | Open
         Source Learning Platform
