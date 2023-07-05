@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <main className="flex pt-28 pb-[50px]">
+    <main className="flex pt-28 pb-[50px] min-h-[calc(100vh_-_51px)] items-center">
       <div className="md:container md:mx-auto px-5">
         <p className=" uppercase text-xs text-slate-600 hero-tagline relative pl-3">LEARN SMARTER</p>
         <h1 className="text-4xl">
@@ -16,7 +16,7 @@ const HomePage = () => {
           </button>
           <p className="text-sm">What you&apos;ll get? 👇</p>
         </div>
-        <div className="flex mt-14 flex-wrap items-center">
+        <div className="flex mt-14 flex-wrap items-center justify-between">
           <div className="p-3 w-full md:w-[320px] border-transparent hover:border-slate-200 transition-all  rounded-lg border">
             <h1 className="text-[12px] uppercase font-bold tracking-[1.4px]">🐣Learn with Real-World Project</h1>
             <p className="text-xs mt-1 text-gray-700">
