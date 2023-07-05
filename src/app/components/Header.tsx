@@ -1,4 +1,4 @@
-import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import React from "react";
 
@@ -10,7 +10,10 @@ const Header = () => {
         <Link href="https://github.com/uqi-dev/olearnin" target="__blank">
           <GitHubLogoIcon width={20} height={20} />
         </Link>
-        <TwitterLogoIcon width={20} height={20} />
+        <Link href="https://www.linkedin.com/company/olearnin" target="__blank">
+          <LinkedInLogoIcon width={20} height={20} />
+        </Link>
+        {/*<TwitterLogoIcon width={20} height={20} />*/}
       </nav>
     </header>
   );

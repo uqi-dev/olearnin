@@ -11,3 +11,15 @@
 body {
   overflow-x: hidden;
 }
+
+
+/* hero section */
+.hero-tagline:after {
+  content: '';
+  height: 10px;
+  width: 6px;
+  background: orange;
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+}
