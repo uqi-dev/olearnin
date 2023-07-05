@@ -15,7 +15,7 @@ const HomePage = () => {
           <button className="p-2 px-4 rounded-full bg-black/90 text-white text-sm">
             Early Access
           </button>
-          <p className="text-sm">What you'll get? 👇</p>
+          <p className="text-sm">What you&apos;ll get? 👇</p>
         </div>
         <div className="flex mt-14 flex-wrap items-center gap-4">
           <div className="p-3 w-full md:w-[320px] border-transparent hover:border-slate-200 transition-all  rounded-lg border">
