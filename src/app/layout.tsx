@@ -1,11 +1,11 @@
+import { Rajdhani } from "next/font/google";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
-import { Inter, Montserrat, Roboto } from "next/font/google";
 
-const font = Roboto({
+const font = Rajdhani({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata = {

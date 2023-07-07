@@ -42,12 +42,18 @@ const WaitlistModal = () => {
       </DialogTrigger>
       <DialogContent className="flex flex-col gap-1 items-center justify-center">
         <DialogTitle className="text-center">
-          {success ? "You're added to our waitlist!!" : "Join the waitlist"}
+          {success ? (
+            <>You&apos;re added to our waitlist!!</>
+          ) : (
+            <>Join the waitlist</>
+          )}
         </DialogTitle>
         <DialogDescription className="text-center">
-          {success
-            ? "You'll get an email when we launch. Stay tuned"
-            : "Get notified when we launch!!"}
+          {success ? (
+            <>You&apos;ll get an email when we launch. Stay tuned</>
+          ) : (
+            <>Get notified when we launch!!</>
+          )}
         </DialogDescription>
         {success ? (
           <div className="flex items-center justify-center flex-col">
@@ -66,8 +72,8 @@ const WaitlistModal = () => {
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="w-10/12 text-sm">
-            <p>Email Address</p>
+          <form onSubmit={handleSubmit} className="w-10/12 mt-4 text-sm">
+            <p className="mb-2">Email Address</p>
             <Input
               value={email}
               onChange={(e) => {
@@ -76,7 +82,11 @@ const WaitlistModal = () => {
               type="email"
               placeholder="Email Address"
             />
-            <Button disabled={loading} className="mt-2 w-full" type="submit">
+            <Button
+              disabled={loading}
+              className="mt-7 hover:bg-orange-600 w-full"
+              type="submit"
+            >
               {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Join
             </Button>

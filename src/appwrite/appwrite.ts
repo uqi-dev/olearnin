@@ -3,13 +3,12 @@ import {
   Client as Appwrite,
   Databases,
   ID,
-  Models,
   Permission,
   Query,
   Storage,
 } from "appwrite";
 
-const databaseId = "64a64f004a2b892eb14f";
+const databaseId = process.env.NEXT_PUBLIC_DATABASE_ID;
 
 let api: any = {
   sdk: null,
@@ -21,7 +20,7 @@ let api: any = {
     let appwrite = new Appwrite();
     appwrite
       .setEndpoint("https://cloud.appwrite.io/v1")
-      .setProject("64820c2b7f745335aee6");
+      .setProject(process.env.NEXT_PUBLIC_PROJECT_ID!);
     const account = new Account(appwrite);
     const database = new Databases(appwrite);
     const storage = new Storage(appwrite);

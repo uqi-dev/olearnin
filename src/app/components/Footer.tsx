@@ -4,8 +4,10 @@ const Footer = () => {
   return (
     <footer className="px-12 flex flex-col  items-end justify-center py-3 w-full">
       <p className="text-[8px]">
-        <span className="text-gray-500 font-medium tracking-[2px] text-[10px]">OLearnin</span> | Open
-        Source Learning Platform
+        <span className="text-gray-500 font-medium tracking-[2px] text-[10px]">
+          OLearnin
+        </span>{" "}
+        | Open Source Learning Platform
       </p>
 
       <div className="flex items-center gap-1 text-[8px]">
