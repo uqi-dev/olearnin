@@ -18,6 +18,7 @@
     "appwrite": "^11.0.0",
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.1",
+    "client-only": "^0.0.1",
     "clsx": "^1.2.1",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.8",
@@ -30,5 +31,8 @@
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "^0.0.12"
   }
 }

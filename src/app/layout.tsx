@@ -1,7 +1,9 @@
 import { Rajdhani } from "next/font/google";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import GoogleAnalytics from "./components/GoogleAnalytics"
 import "./globals.css";
+import CookieBanner from "@/app/components/cookiebanner";
 
 const font = Rajdhani({
   subsets: ["latin"],
@@ -22,10 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+    <GoogleAnalytics GA_MEASUREMENT_ID='G-V8LD1KXM21'/>
       <body className={font.className}>
         <Header />
         {children}
         <Footer />
+        <CookieBanner/>
       </body>
     </html>
   );
