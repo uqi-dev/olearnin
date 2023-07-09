@@ -68,3 +68,49 @@ body {
   bottom: 3px;
   left: 0px;
 }
+
+
+/* course > sidenav */
+
+.sidenav h3{
+  position: relative;
+}
+.sidenav h3:before{
+  content: '';
+  height: 10px;
+  width: 13.5px;
+  background: #80808052;
+  position: absolute;
+  left: -17px;
+  top: 4.5px;
+}
+.sidenav ul li{
+  position: relative;
+  font-size: 13px;
+  padding-left: 6px;
+}
+.sidenav ul li:before{
+  content: '';
+  height: 1px;
+  width: 12px;
+  background: gray;
+  position: absolute;
+  left: -17px;
+  top: 10px;
+}
+.sidenav ul li.active{
+  position: relative;
+  font-size: 13px;
+  padding-left: 16px;
+  color: orange;
+  font-weight: bold;
+}
+.sidenav ul li.active:before{
+  content: '';
+  height: 1px;
+  width: 20px;
+  background: orange;
+  position: absolute;
+  left: -17px;
+  top: 10px;
+}

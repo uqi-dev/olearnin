@@ -1,9 +1,9 @@
 import { Rajdhani } from "next/font/google";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import GoogleAnalytics from "./components/GoogleAnalytics"
-import "./globals.css";
-import CookieBanner from "@/app/components/cookiebanner";
+import Footer from "@/app/(general-space)/components/Footer";
+import Header from "@/app/(general-space)/components/Header";
+import GoogleAnalytics from "@/app/(general-space)/components/GoogleAnalytics"
+import "../globals.css";
+import CookieBanner from "@/app/(general-space)/components/cookiebanner";
 
 const font = Rajdhani({
   subsets: ["latin"],

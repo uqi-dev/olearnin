@@ -1,4 +1,4 @@
-import WaitlistModal from "./components/WaitlistModal";
+import WaitlistModal from "@/app/(general-space)/components/WaitlistModal";
 
 const HomePage = () => {
   return (
