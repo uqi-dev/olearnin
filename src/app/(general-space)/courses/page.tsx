@@ -1,5 +1,5 @@
-import CoursesBanner from "@/app/courses/components/courses-banner";
-import CourseCard from "@/app/courses/components/course-card";
+import CoursesBanner from "@/app/(general-space)/courses/components/courses-banner";
+import CourseCard from "@/app/(general-space)/courses/components/course-card";
 
 const CoursePage = () => {
   return (
