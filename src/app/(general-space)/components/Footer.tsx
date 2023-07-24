@@ -2,49 +2,32 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="px-12 flex flex-col  items-end justify-center py-3 w-full">
-      <p className="text-[8px]">
-        <span className="text-gray-500 font-medium tracking-[2px] text-[10px]">
+    <footer className="px-12 flex flex-col font-bold items-end justify-center py-3 w-full">
+      <p className="text-[13px]">
+        <span className="text-gray-500 font-medium tracking-[2px] ">
           OLearnin
         </span>{" "}
         | Open Source Learning Platform
       </p>
 
-      <div className="flex items-center gap-1 text-[8px]">
-        by
+      <div className="flex items-end gap-1 text-[13px]">
+
         <Link
-          className="transition-all hover:scale-105"
-          href={"https://twitter.com/dev_syedshihab"}
+          href={"https://uqidev.com"}
           target="__blank"
         >
-          <div className="font-medium flex items-center gap-1">
+          <div className="font-medium flex items-end gap-1 text-orange-500">
             <img
-              src={"/desyed.jpg"}
-              className=" object-cover rounded-full"
-              width={10}
-              height={10}
+              src={"/uqidev.png"}
+              className=" object-cover"
+              width={25}
+              height={25}
               alt="desyed"
             />
-            Syed Shihab
+            UQIDEV
           </div>
         </Link>
-        <span>&</span>
-        <Link
-          className="transition-all hover:scale-105"
-          href={"https://twitter.com/niazmorshed_"}
-          target="__blank"
-        >
-          <div className="font-medium flex items-center gap-1">
-            <img
-              src={"/niazmorshed.jpg"}
-              className=" object-cover rounded-full"
-              width={10}
-              height={10}
-              alt="desyed"
-            />
-            Niaz Morshed
-          </div>
-        </Link>
+        Initiative
       </div>
     </footer>
   );
