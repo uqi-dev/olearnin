@@ -24,21 +24,23 @@ const Sidebar: React.FC = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://api.github.com/repos/desyed/Test-Tutorial-For-Olearnin/git/trees/main?recursive=1"
+        "https://api.github.com/repos/soykot2910/Test-Tutorial-For-Olearnin/git/trees/main?recursive=1"
       );
       const data = await response.json();
+
       // Filter and format data to get the desired tree structure
       const treeData = data.tree.filter((item: any) => item.type === "blob");
+
       const menuItemsData: MainMenu = {};
 
       treeData.forEach((item: any) => {
         const pathParts = item.path.split("/");
-        const mainMenu = pathParts[0];
-        const subMenu = pathParts.slice(1).join("/").split(".md")[0];
+        const mainMenu = pathParts[2];
+        const subMenu = pathParts.slice(3).join("/").split(".md")[0];
         const formattedSubMenu = subMenu.toLowerCase().replace(/\s+/g, "-");
         const menuItem: SubMenu = {
           subMenu: formattedSubMenu,
-          path: `/${mainMenu}/${formattedSubMenu}`,
+          path: item.path.replace(".md", ""),
         };
 
         if (menuItemsData[mainMenu]) {
@@ -49,6 +51,12 @@ const Sidebar: React.FC = () => {
       });
 
       setMenuItems(menuItemsData);
+
+      // Set the first submenu as activeSubMenu by default
+      if (Object.keys(menuItemsData).length > 0) {
+        const firstSubMenu = menuItemsData[Object.keys(menuItemsData)[0]][0];
+        setActiveSubMenu(firstSubMenu);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -56,8 +64,7 @@ const Sidebar: React.FC = () => {
 
   const handleSubMenuClick = (subMenu: SubMenu) => {
     setActiveSubMenu(subMenu);
-    // Update the URL when a sub-menu is clicked
-    router.push(subMenu.path);
+    router.push(`/${subMenu.path}`);
   };
 
   return (
@@ -73,10 +80,7 @@ const Sidebar: React.FC = () => {
                   className={subMenu === activeSubMenu ? "active" : ""}
                   onClick={() => handleSubMenuClick(subMenu)}
                 >
-                  {/* Use Link to handle navigation */}
-                  <Link href={subMenu.path} passHref>
-                    {subMenu.subMenu}
-                  </Link>
+                  {subMenu.subMenu}
                 </li>
               ))}
             </ul>
